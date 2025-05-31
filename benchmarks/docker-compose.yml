@@ -1,0 +1,36 @@
+services:
+  ignite_0:
+    image: apacheignite/ignite:2.17.0
+    ports:
+      - 10800:10800
+    restart: always
+    environment:
+      CONFIG_URI: file:/config/ignite-config.xml
+      JVM_OPTS: -Xms4G -Xmx4G -XX:+UseG1GC
+    volumes:
+      - ./config:/config:ro
+    network_mode: host
+
+  ignite_1:
+    image: apacheignite/ignite:2.17.0
+    ports:
+      - 10800:10801
+    restart: always
+    environment:
+      CONFIG_URI: file:/config/ignite-config.xml
+      JVM_OPTS: -Xms4G -Xmx4G -XX:+UseG1GC
+    volumes:
+      - ./config:/config:ro
+    network_mode: host
+
+  ignite_2:
+    image: apacheignite/ignite:2.17.0
+    ports:
+      - 10800:10802
+    restart: always
+    environment:
+      CONFIG_URI: file:/config/ignite-config.xml
+      JVM_OPTS: -Xms4G -Xmx4G -XX:+UseG1GC
+    volumes:
+      - ./config:/config:ro
+    network_mode: host

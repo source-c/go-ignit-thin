@@ -2,8 +2,6 @@ module github.com/source-c/go-ignit-thin
 
 go 1.23.0
 
-toolchain go1.24.3
-
 require (
 	github.com/cockroachdb/apd/v3 v3.2.1
 	github.com/google/uuid v1.6.0
